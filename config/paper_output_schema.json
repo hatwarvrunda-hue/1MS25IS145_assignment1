@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ScholarFlowPaperOutput",
+  "type": "object",
+  "required": [
+    "title",
+    "research_question",
+    "abstract",
+    "keywords",
+    "research_plan",
+    "outline",
+    "evidence_matrix",
+    "sections",
+    "references",
+    "limitations",
+    "claims_to_verify",
+    "academic_integrity_note"
+  ],
+  "properties": {
+    "title": { "type": "string" },
+    "research_question": { "type": "string" },
+    "academic_level": { "type": "string" },
+    "citation_style": { "type": "string" },
+    "abstract": { "type": "string" },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "research_plan": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "outline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["heading", "description"],
+        "properties": {
+          "heading": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "evidence_matrix": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "url"],
+        "properties": {
+          "title": { "type": "string" },
+          "authors": { "type": "string" },
+          "year": { "type": "string" },
+          "sourceType": { "type": "string" },
+          "keyFindings": { "type": "string" },
+          "studyDesign": { "type": "string" },
+          "limitations": { "type": "string" },
+          "url": { "type": "string" },
+          "relevance": { "type": "string" }
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["heading", "body"],
+        "properties": {
+          "heading": { "type": "string" },
+          "body": { "type": "string" }
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "citation", "url"],
+        "properties": {
+          "id": { "type": "string" },
+          "citation": { "type": "string" },
+          "url": { "type": "string" },
+          "title": { "type": "string" },
+          "year": { "type": "string" },
+          "authors": { "type": "string" }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "claims_to_verify": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "academic_integrity_note": { "type": "string" },
+    "generated_at": { "type": "string" }
+  }
+}

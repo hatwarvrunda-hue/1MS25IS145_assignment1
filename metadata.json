@@ -1,0 +1,6 @@
+{
+  "name": "ScholarFlow — Research Paper Agent",
+  "description": "Student-friendly AI research assistant that builds research plans, discovers real grounded sources, evaluates evidence, and drafts academic research papers with clickable citations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
